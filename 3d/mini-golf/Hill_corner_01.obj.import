@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hill_corner_01.obj-eb8f42d7bc1b0c7d1934ec6b4a6a58db.mesh"
+
+[deps]
+
+files=[ "res://.import/Hill_corner_01.obj-eb8f42d7bc1b0c7d1934ec6b4a6a58db.mesh" ]
+
+source_file="res://3d/mini-golf/Hill_corner_01.obj"
+dest_files=[ "res://.import/Hill_corner_01.obj-eb8f42d7bc1b0c7d1934ec6b4a6a58db.mesh", "res://.import/Hill_corner_01.obj-eb8f42d7bc1b0c7d1934ec6b4a6a58db.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

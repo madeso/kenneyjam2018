@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Windmill_blades_01.obj-75f58dc3311bd7c5f7e3b6cc232e3d5e.mesh"
+
+[deps]
+
+files=[ "res://.import/Windmill_blades_01.obj-75f58dc3311bd7c5f7e3b6cc232e3d5e.mesh" ]
+
+source_file="res://3d/mini-golf/Windmill_blades_01.obj"
+dest_files=[ "res://.import/Windmill_blades_01.obj-75f58dc3311bd7c5f7e3b6cc232e3d5e.mesh", "res://.import/Windmill_blades_01.obj-75f58dc3311bd7c5f7e3b6cc232e3d5e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Obstacle_triangle_01.obj-9a017ba362eaa443dd866b87c2769859.mesh"
+
+[deps]
+
+files=[ "res://.import/Obstacle_triangle_01.obj-9a017ba362eaa443dd866b87c2769859.mesh" ]
+
+source_file="res://3d/mini-golf/Obstacle_triangle_01.obj"
+dest_files=[ "res://.import/Obstacle_triangle_01.obj-9a017ba362eaa443dd866b87c2769859.mesh", "res://.import/Obstacle_triangle_01.obj-9a017ba362eaa443dd866b87c2769859.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Bump_down_01.obj-647b35a1a9b10b7232bf2b74ec50bf2b.mesh"
+
+[deps]
+
+files=[ "res://.import/Bump_down_01.obj-647b35a1a9b10b7232bf2b74ec50bf2b.mesh" ]
+
+source_file="res://3d/mini-golf/Bump_down_01.obj"
+dest_files=[ "res://.import/Bump_down_01.obj-647b35a1a9b10b7232bf2b74ec50bf2b.mesh", "res://.import/Bump_down_01.obj-647b35a1a9b10b7232bf2b74ec50bf2b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

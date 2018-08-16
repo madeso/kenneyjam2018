@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Open_01.obj-197c7a0f918acb372450dd8516d01001.mesh"
+
+[deps]
+
+files=[ "res://.import/Open_01.obj-197c7a0f918acb372450dd8516d01001.mesh" ]
+
+source_file="res://3d/mini-golf/Open_01.obj"
+dest_files=[ "res://.import/Open_01.obj-197c7a0f918acb372450dd8516d01001.mesh", "res://.import/Open_01.obj-197c7a0f918acb372450dd8516d01001.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

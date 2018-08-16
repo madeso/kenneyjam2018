@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Bump_down_walls_01.obj-f06ad1800f9ae50dc4682c3a9155b249.mesh"
+
+[deps]
+
+files=[ "res://.import/Bump_down_walls_01.obj-f06ad1800f9ae50dc4682c3a9155b249.mesh" ]
+
+source_file="res://3d/mini-golf/Bump_down_walls_01.obj"
+dest_files=[ "res://.import/Bump_down_walls_01.obj-f06ad1800f9ae50dc4682c3a9155b249.mesh", "res://.import/Bump_down_walls_01.obj-f06ad1800f9ae50dc4682c3a9155b249.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

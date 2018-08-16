@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Round_corner_2_01.obj-9ac56ad707dddebd353baadac3ecd7f2.mesh"
+
+[deps]
+
+files=[ "res://.import/Round_corner_2_01.obj-9ac56ad707dddebd353baadac3ecd7f2.mesh" ]
+
+source_file="res://3d/mini-golf/Round_corner_2_01.obj"
+dest_files=[ "res://.import/Round_corner_2_01.obj-9ac56ad707dddebd353baadac3ecd7f2.mesh", "res://.import/Round_corner_2_01.obj-9ac56ad707dddebd353baadac3ecd7f2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

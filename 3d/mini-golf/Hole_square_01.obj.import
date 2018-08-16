@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hole_square_01.obj-c838292351a2717cb903b2878f49008d.mesh"
+
+[deps]
+
+files=[ "res://.import/Hole_square_01.obj-c838292351a2717cb903b2878f49008d.mesh" ]
+
+source_file="res://3d/mini-golf/Hole_square_01.obj"
+dest_files=[ "res://.import/Hole_square_01.obj-c838292351a2717cb903b2878f49008d.mesh", "res://.import/Hole_square_01.obj-c838292351a2717cb903b2878f49008d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

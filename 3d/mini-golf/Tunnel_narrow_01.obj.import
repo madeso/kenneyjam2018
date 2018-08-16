@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Tunnel_narrow_01.obj-baad3129edafdef9d766ecf5ab55ccac.mesh"
+
+[deps]
+
+files=[ "res://.import/Tunnel_narrow_01.obj-baad3129edafdef9d766ecf5ab55ccac.mesh" ]
+
+source_file="res://3d/mini-golf/Tunnel_narrow_01.obj"
+dest_files=[ "res://.import/Tunnel_narrow_01.obj-baad3129edafdef9d766ecf5ab55ccac.mesh", "res://.import/Tunnel_narrow_01.obj-baad3129edafdef9d766ecf5ab55ccac.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

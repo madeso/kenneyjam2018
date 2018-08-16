@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Gap_01.obj-d37b81f0667e1ece02fadb73af948086.mesh"
+
+[deps]
+
+files=[ "res://.import/Gap_01.obj-d37b81f0667e1ece02fadb73af948086.mesh" ]
+
+source_file="res://3d/mini-golf/Gap_01.obj"
+dest_files=[ "res://.import/Gap_01.obj-d37b81f0667e1ece02fadb73af948086.mesh", "res://.import/Gap_01.obj-d37b81f0667e1ece02fadb73af948086.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

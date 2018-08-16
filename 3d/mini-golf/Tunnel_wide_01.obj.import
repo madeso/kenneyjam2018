@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Tunnel_wide_01.obj-e3a598478c2a354d62dccfbebae5736f.mesh"
+
+[deps]
+
+files=[ "res://.import/Tunnel_wide_01.obj-e3a598478c2a354d62dccfbebae5736f.mesh" ]
+
+source_file="res://3d/mini-golf/Tunnel_wide_01.obj"
+dest_files=[ "res://.import/Tunnel_wide_01.obj-e3a598478c2a354d62dccfbebae5736f.mesh", "res://.import/Tunnel_wide_01.obj-e3a598478c2a354d62dccfbebae5736f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

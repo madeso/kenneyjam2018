@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/T_split_01.obj-dfc9bf1b8fa80da550a5d3826143f2de.mesh"
+
+[deps]
+
+files=[ "res://.import/T_split_01.obj-dfc9bf1b8fa80da550a5d3826143f2de.mesh" ]
+
+source_file="res://3d/mini-golf/T_split_01.obj"
+dest_files=[ "res://.import/T_split_01.obj-dfc9bf1b8fa80da550a5d3826143f2de.mesh", "res://.import/T_split_01.obj-dfc9bf1b8fa80da550a5d3826143f2de.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

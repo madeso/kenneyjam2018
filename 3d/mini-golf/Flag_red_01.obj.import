@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Flag_red_01.obj-3b4a8013053419685308402867059fe5.mesh"
+
+[deps]
+
+files=[ "res://.import/Flag_red_01.obj-3b4a8013053419685308402867059fe5.mesh" ]
+
+source_file="res://3d/mini-golf/Flag_red_01.obj"
+dest_files=[ "res://.import/Flag_red_01.obj-3b4a8013053419685308402867059fe5.mesh", "res://.import/Flag_red_01.obj-3b4a8013053419685308402867059fe5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

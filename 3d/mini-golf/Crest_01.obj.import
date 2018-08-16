@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Crest_01.obj-fe87b61fb73cbfbf9f9aa77a3231610d.mesh"
+
+[deps]
+
+files=[ "res://.import/Crest_01.obj-fe87b61fb73cbfbf9f9aa77a3231610d.mesh" ]
+
+source_file="res://3d/mini-golf/Crest_01.obj"
+dest_files=[ "res://.import/Crest_01.obj-fe87b61fb73cbfbf9f9aa77a3231610d.mesh", "res://.import/Crest_01.obj-fe87b61fb73cbfbf9f9aa77a3231610d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

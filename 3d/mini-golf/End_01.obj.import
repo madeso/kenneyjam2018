@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/End_01.obj-44d08042117a96dae6eeebebcc2ac008.mesh"
+
+[deps]
+
+files=[ "res://.import/End_01.obj-44d08042117a96dae6eeebebcc2ac008.mesh" ]
+
+source_file="res://3d/mini-golf/End_01.obj"
+dest_files=[ "res://.import/End_01.obj-44d08042117a96dae6eeebebcc2ac008.mesh", "res://.import/End_01.obj-44d08042117a96dae6eeebebcc2ac008.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
