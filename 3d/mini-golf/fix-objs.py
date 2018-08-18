@@ -33,4 +33,4 @@ for obj in glob.glob('*.obj'):
     if os.path.isfile(sett_file):
       with open(sett_file) as s:
         align =s.read()
-    subprocess.check_call([assimp_path, 'export', from_path, to_path, '-am=' + align, '-tri', '-jiv', '-rrm', '-fixn', ])
+    subprocess.check_call([assimp_path, 'export', from_path, to_path, '-am=' + align, '-tri'])
