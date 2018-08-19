@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://Music/Casa Bossa Nova.ogg" type="AudioStream" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://Mesh Libraries/Prefabs/Tree2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Mesh Libraries/Prefabs/Tree3.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Mesh Libraries/Nature2.meshlib" type="MeshLibrary" id=20]
+[ext_resource path="res://Spatial.gd" type="Script" id=21]
+[ext_resource path="res://3d/nature-flat/naturePack_flat_009.obj" type="ArrayMesh" id=22]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 
@@ -38,7 +40,7 @@ points = PoolVector3Array( -0.899902, 0, 0.0999756, -0.899902, 0, -0.0999756, -1
 radius = 1.5
 height = 3.0
 
-[node name="Spatial" type="Spatial"]
+[node name="Spatial" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -813,13 +815,1092 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 11, 11, 0, 1048576, 12, 0, 1048576, 13, 0, 1048576, 14, 0, 1048576, 15, 0, 0, 16, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 1048576, 65529, 0, 1048576, 65530, 0, 0, 65531, 0, 1, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 655370, 10, 1, 10, 11, 1, 1048576, 12, 1, 1048576, 13, 1, 1048576, 14, 1, 0, 15, 1, 0, 16, 1, 0, 65526, 1, 0, 65527, 1, 0, 65528, 1, 0, 65529, 1, 1048576, 65530, 1, 0, 65531, 1, 1441802, 65532, 1, 1048586, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 655361, 10, 2, 1048576, 11, 2, 1048576, 12, 2, 1048576, 13, 2, 1048576, 14, 2, 0, 15, 2, 0, 65525, 2, 0, 65526, 2, 0, 65527, 2, 0, 65528, 2, 0, 65529, 2, 1048576, 65530, 2, 0, 65531, 2, 0, 65532, 2, 1441802, 65533, 2, 1048586, 65534, 2, 0, 65535, 2, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 655369, 4, 3, 1441793, 5, 3, 1441793, 6, 3, 1048577, 7, 3, 1048577, 8, 3, 1048577, 9, 3, 10, 10, 3, 1048576, 11, 3, 1048576, 12, 3, 1048576, 13, 3, 0, 14, 3, 0, 15, 3, 0, 65527, 3, 0, 65528, 3, 0, 65529, 3, 1048576, 65530, 3, 1048576, 65531, 3, 0, 65532, 3, 0, 65533, 3, 1, 65534, 3, 0, 65535, 3, 0, 0, 4, 1048577, 1, 4, 1048582, 2, 4, 1441793, 3, 4, 9, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 1048576, 10, 4, 1048576, 11, 4, 1048576, 12, 4, 0, 13, 4, 0, 14, 4, 0, 65527, 4, 0, 65528, 4, 0, 65529, 4, 1048576, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 1441802, 65534, 4, 1048577, 65535, 4, 1048577, 0, 5, 0, 1, 5, 655361, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 1048576, 9, 5, 1048576, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 65528, 5, 0, 65529, 5, 0, 65530, 5, 0, 65531, 5, 0, 65532, 5, 1048576, 65533, 5, 0, 65534, 5, 0, 65535, 5, 0, 0, 6, 0, 1, 6, 655373, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 8, 6, 1048576, 9, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 65529, 6, 0, 65530, 6, 0, 65531, 6, 0, 65532, 6, 1048576, 65533, 6, 0, 65534, 6, 0, 65535, 6, 0, 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 1048576, 7, 7, 1048576, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 65531, 7, 0, 65532, 7, 0, 65533, 7, 1048576, 65534, 7, 1048576, 65535, 7, 0, 0, 8, 1048576, 1, 8, 1048576, 2, 8, 1048576, 3, 8, 1048576, 4, 8, 1048576, 5, 8, 1048576, 6, 8, 1048576, 7, 8, 0, 8, 8, 0, 9, 8, 0, 65531, 8, 0, 65532, 8, 0, 65533, 8, 0, 65534, 8, 0, 65535, 8, 1048576, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0, 65534, 9, 0, 65535, 9, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 5, 10, 0, 6, 10, 0, 7, 10, 0, 65535, 10, 0, 1, 11, 0, 2, 11, 0, 3, 11, 0, 4, 11, 0, 5, 11, 0, 6, 11, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 3, 13, 0, 4, 13, 0, 5, 13, 0, 3, 14, 0, 4, 14, 0, 5, 14, 0, 4, 15, 0, 4, 16, 0, 4, 65523, 0, 5, 65523, 0, 6, 65523, 0, 7, 65523, 0, 2, 65524, 0, 3, 65524, 0, 4, 65524, 0, 5, 65524, 0, 6, 65524, 0, 7, 65524, 0, 8, 65524, 0, 0, 65525, 0, 1, 65525, 0, 2, 65525, 0, 3, 65525, 0, 4, 65525, 0, 5, 65525, 0, 6, 65525, 0, 7, 65525, 0, 8, 65525, 0, 9, 65525, 0, 0, 65526, 0, 1, 65526, 0, 2, 65526, 0, 3, 65526, 0, 4, 65526, 0, 5, 65526, 0, 6, 65526, 0, 7, 65526, 0, 8, 65526, 0, 9, 65526, 0, 10, 65526, 0, 11, 65526, 0, 65534, 65526, 0, 65535, 65526, 0, 0, 65527, 0, 1, 65527, 0, 2, 65527, 0, 3, 65527, 0, 4, 65527, 0, 5, 65527, 0, 6, 65527, 0, 7, 65527, 0, 8, 65527, 0, 9, 65527, 0, 10, 65527, 0, 11, 65527, 0, 12, 65527, 0, 13, 65527, 0, 65533, 65527, 0, 65534, 65527, 0, 65535, 65527, 0, 0, 65528, 1048576, 1, 65528, 0, 2, 65528, 655369, 3, 65528, 1441805, 4, 65528, 1048576, 5, 65528, 1048576, 6, 65528, 1048576, 7, 65528, 0, 8, 65528, 0, 9, 65528, 0, 10, 65528, 0, 11, 65528, 0, 12, 65528, 0, 13, 65528, 0, 14, 65528, 0, 65531, 65528, 0, 65532, 65528, 0, 65533, 65528, 0, 65534, 65528, 0, 65535, 65528, 1048576, 0, 65529, 1048576, 1, 65529, 1048576, 2, 65529, 655371, 3, 65529, 1048576, 4, 65529, 1048576, 5, 65529, 1048576, 6, 65529, 1048576, 7, 65529, 1048576, 8, 65529, 1048576, 9, 65529, 0, 10, 65529, 0, 11, 65529, 1048576, 12, 65529, 1048576, 13, 65529, 0, 14, 65529, 0, 15, 65529, 0, 65530, 65529, 0, 65531, 65529, 0, 65532, 65529, 0, 65533, 65529, 1048576, 65534, 65529, 1048576, 65535, 65529, 1048576, 0, 65530, 0, 1, 65530, 0, 2, 65530, 655371, 3, 65530, 0, 4, 65530, 0, 5, 65530, 1048576, 6, 65530, 1048576, 7, 65530, 1048576, 8, 65530, 1048576, 9, 65530, 1048576, 10, 65530, 1048576, 11, 65530, 1048576, 12, 65530, 1048576, 13, 65530, 1048576, 14, 65530, 0, 15, 65530, 0, 65529, 65530, 0, 65530, 65530, 0, 65531, 65530, 1048576, 65532, 65530, 1048576, 65533, 65530, 1048576, 65534, 65530, 1048576, 65535, 65530, 0, 0, 65531, 0, 1, 65531, 655370, 2, 65531, 1441798, 3, 65531, 1048577, 4, 65531, 1048586, 5, 65531, 0, 6, 65531, 655370, 7, 65531, 1048577, 8, 65531, 1048577, 9, 65531, 1441803, 10, 65531, 1048586, 11, 65531, 1048576, 12, 65531, 1048576, 13, 65531, 1048576, 14, 65531, 1048576, 15, 65531, 0, 16, 65531, 0, 65528, 65531, 0, 65529, 65531, 0, 65530, 65531, 1048576, 65531, 65531, 1048576, 65532, 65531, 1048576, 65533, 65531, 0, 65534, 65531, 0, 65535, 65531, 0, 0, 65532, 1441793, 1, 65532, 10, 2, 65532, 0, 3, 65532, 0, 4, 65532, 1, 5, 65532, 0, 6, 65532, 655361, 7, 65532, 0, 8, 65532, 1048576, 9, 65532, 1048576, 10, 65532, 1, 11, 65532, 1048576, 12, 65532, 1048576, 13, 65532, 1048576, 14, 65532, 1048576, 15, 65532, 1048576, 16, 65532, 0, 65528, 65532, 0, 65529, 65532, 1048576, 65530, 65532, 1048576, 65531, 65532, 0, 65532, 65532, 0, 65533, 65532, 655370, 65534, 65532, 1048577, 65535, 65532, 1048577, 0, 65533, 0, 1, 65533, 0, 2, 65533, 0, 3, 65533, 0, 4, 65533, 1441802, 5, 65533, 1441793, 6, 65533, 10, 7, 65533, 0, 8, 65533, 0, 9, 65533, 0, 10, 65533, 1, 11, 65533, 1048576, 12, 65533, 1048576, 13, 65533, 1048576, 14, 65533, 1048576, 15, 65533, 1048576, 16, 65533, 0, 65527, 65533, 0, 65528, 65533, 0, 65529, 65533, 1048576, 65530, 65533, 1048576, 65531, 65533, 0, 65532, 65533, 0, 65533, 65533, 655361, 65534, 65533, 0, 65535, 65533, 0, 0, 65534, 0, 1, 65534, 0, 2, 65534, 0, 3, 65534, 0, 4, 65534, 0, 5, 65534, 0, 6, 65534, 0, 7, 65534, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 1, 11, 65534, 1048576, 12, 65534, 1048576, 13, 65534, 1048576, 14, 65534, 1048576, 15, 65534, 0, 16, 65534, 0, 17, 65534, 0, 65527, 65534, 0, 65528, 65534, 0, 65529, 65534, 1048576, 65530, 65534, 0, 65531, 65534, 655370, 65532, 65534, 1441793, 65533, 65534, 10, 65534, 65534, 0, 65535, 65534, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 0, 5, 65535, 0, 6, 65535, 0, 7, 65535, 0, 8, 65535, 0, 9, 65535, 0, 10, 65535, 11, 11, 65535, 1048576, 12, 65535, 1048576, 13, 65535, 1048576, 14, 65535, 1048576, 15, 65535, 1048576, 16, 65535, 0, 65526, 65535, 0, 65527, 65535, 0, 65528, 65535, 1048576, 65529, 65535, 0, 65530, 65535, 0, 65531, 65535, 1, 65532, 65535, 0, 65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0 )
+"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 11, 11, 0, 1048576, 12, 0, 1048576, 13, 0, 1048576, 14, 0, 1048576, 15, 0, 0, 16, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 1048576, 65529, 0, 1048576, 65530, 0, 0, 65531, 0, 1, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 655370, 10, 1, 10, 11, 1, 1048576, 12, 1, 1048576, 13, 1, 1048576, 14, 1, 0, 15, 1, 0, 16, 1, 0, 65526, 1, 0, 65527, 1, 0, 65528, 1, 0, 65529, 1, 1048576, 65530, 1, 0, 65531, 1, 1441802, 65532, 1, 1048586, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 655361, 10, 2, 1048576, 11, 2, 1048576, 12, 2, 1048576, 13, 2, 1048576, 14, 2, 0, 15, 2, 0, 65525, 2, 0, 65526, 2, 0, 65527, 2, 0, 65528, 2, 0, 65529, 2, 1048576, 65530, 2, 0, 65531, 2, 0, 65532, 2, 1441802, 65533, 2, 1048586, 65534, 2, 0, 65535, 2, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 655369, 4, 3, 1441793, 5, 3, 1441793, 6, 3, 1048577, 7, 3, 1048577, 8, 3, 1048577, 9, 3, 10, 10, 3, 1048576, 11, 3, 1048576, 12, 3, 1048576, 13, 3, 0, 14, 3, 0, 15, 3, 0, 65527, 3, 0, 65528, 3, 0, 65529, 3, 1048576, 65530, 3, 1048576, 65531, 3, 0, 65532, 3, 0, 65533, 3, 1, 65534, 3, 0, 65535, 3, 0, 0, 4, 1048577, 1, 4, 1048582, 2, 4, 1441793, 3, 4, 9, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 1048576, 10, 4, 1048576, 11, 4, 1048576, 12, 4, 0, 13, 4, 0, 14, 4, 0, 65527, 4, 0, 65528, 4, 0, 65529, 4, 1048576, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 1441802, 65534, 4, 1048577, 65535, 4, 1048577, 0, 5, 0, 1, 5, 655361, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 1048576, 9, 5, 1048576, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 65528, 5, 0, 65529, 5, 0, 65530, 5, 0, 65531, 5, 0, 65532, 5, 1048576, 65533, 5, 0, 65534, 5, 0, 65535, 5, 0, 0, 6, 0, 1, 6, 655373, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 8, 6, 1048576, 9, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 65529, 6, 0, 65530, 6, 0, 65531, 6, 0, 65532, 6, 1048576, 65533, 6, 0, 65534, 6, 0, 65535, 6, 0, 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 1048576, 7, 7, 1048576, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 65531, 7, 0, 65532, 7, 0, 65533, 7, 1048576, 65534, 7, 1048576, 65535, 7, 0, 0, 8, 1048576, 1, 8, 1048576, 2, 8, 1048576, 3, 8, 1048576, 4, 8, 1048576, 5, 8, 1048576, 6, 8, 1048576, 7, 8, 0, 8, 8, 0, 9, 8, 0, 65531, 8, 0, 65532, 8, 0, 65533, 8, 0, 65534, 8, 0, 65535, 8, 1048576, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0, 65534, 9, 0, 65535, 9, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 5, 10, 0, 6, 10, 0, 7, 10, 0, 65535, 10, 0, 1, 11, 0, 2, 11, 0, 3, 11, 0, 4, 11, 0, 5, 11, 0, 6, 11, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 3, 13, 0, 4, 13, 0, 5, 13, 0, 3, 14, 0, 4, 14, 0, 5, 14, 0, 4, 15, 0, 4, 16, 0, 4, 65523, 0, 5, 65523, 0, 6, 65523, 0, 7, 65523, 0, 2, 65524, 0, 3, 65524, 0, 4, 65524, 0, 5, 65524, 0, 6, 65524, 0, 7, 65524, 0, 8, 65524, 0, 0, 65525, 0, 1, 65525, 0, 2, 65525, 0, 3, 65525, 0, 4, 65525, 0, 5, 65525, 0, 6, 65525, 0, 7, 65525, 0, 8, 65525, 0, 9, 65525, 0, 0, 65526, 0, 1, 65526, 0, 2, 65526, 0, 3, 65526, 0, 4, 65526, 0, 5, 65526, 0, 6, 65526, 0, 7, 65526, 0, 8, 65526, 0, 9, 65526, 0, 10, 65526, 0, 11, 65526, 0, 65534, 65526, 0, 65535, 65526, 0, 0, 65527, 0, 1, 65527, 0, 2, 65527, 0, 3, 65527, 0, 4, 65527, 0, 5, 65527, 0, 6, 65527, 0, 7, 65527, 0, 8, 65527, 0, 9, 65527, 0, 10, 65527, 0, 11, 65527, 0, 12, 65527, 0, 13, 65527, 0, 65533, 65527, 0, 65534, 65527, 0, 65535, 65527, 0, 0, 65528, 1048576, 1, 65528, 0, 2, 65528, 655369, 3, 65528, 1441805, 4, 65528, 1048576, 5, 65528, 1048576, 6, 65528, 1048576, 7, 65528, 0, 8, 65528, 0, 9, 65528, 0, 10, 65528, 0, 11, 65528, 0, 12, 65528, 0, 13, 65528, 0, 14, 65528, 0, 65531, 65528, 0, 65532, 65528, 0, 65533, 65528, 0, 65534, 65528, 0, 65535, 65528, 1048576, 0, 65529, 1048576, 1, 65529, 1048576, 2, 65529, 655371, 3, 65529, 1048576, 4, 65529, 1048576, 5, 65529, 1048576, 6, 65529, 1048576, 7, 65529, 1048576, 8, 65529, 1048576, 9, 65529, 0, 10, 65529, 0, 11, 65529, 1048576, 12, 65529, 1048576, 13, 65529, 0, 14, 65529, 0, 15, 65529, 0, 65530, 65529, 0, 65531, 65529, 0, 65532, 65529, 0, 65533, 65529, 1048576, 65534, 65529, 1048576, 65535, 65529, 1048576, 0, 65530, 0, 1, 65530, 0, 2, 65530, 655371, 3, 65530, 0, 4, 65530, 0, 5, 65530, 1048576, 6, 65530, 1048576, 7, 65530, 1048576, 8, 65530, 1048576, 9, 65530, 1048576, 10, 65530, 1048576, 11, 65530, 1048576, 12, 65530, 1048576, 13, 65530, 1048576, 14, 65530, 0, 15, 65530, 0, 65529, 65530, 0, 65530, 65530, 0, 65531, 65530, 1048576, 65532, 65530, 1048576, 65533, 65530, 1048576, 65534, 65530, 1048576, 65535, 65530, 0, 0, 65531, 0, 1, 65531, 655370, 2, 65531, 1441798, 3, 65531, 1048577, 4, 65531, 1048586, 5, 65531, 0, 6, 65531, 655370, 7, 65531, 1048577, 8, 65531, 1048577, 9, 65531, 1441803, 10, 65531, 1048586, 11, 65531, 1048576, 12, 65531, 1048576, 13, 65531, 1048576, 14, 65531, 1048576, 15, 65531, 0, 16, 65531, 0, 65528, 65531, 0, 65529, 65531, 0, 65530, 65531, 1048576, 65531, 65531, 1048576, 65532, 65531, 1048576, 65533, 65531, 0, 65534, 65531, 0, 65535, 65531, 0, 0, 65532, 1441793, 1, 65532, 10, 2, 65532, 0, 3, 65532, 0, 4, 65532, 1, 5, 65532, 0, 6, 65532, 655361, 7, 65532, 0, 8, 65532, 1048576, 9, 65532, 1048576, 10, 65532, 1, 11, 65532, 1048576, 12, 65532, 1048576, 13, 65532, 1048576, 14, 65532, 1048576, 15, 65532, 1048576, 16, 65532, 0, 65528, 65532, 0, 65529, 65532, 1048576, 65530, 65532, 1048576, 65531, 65532, 0, 65532, 65532, 0, 65533, 65532, 655369, 65534, 65532, 1048577, 65535, 65532, 1048577, 0, 65533, 0, 1, 65533, 0, 2, 65533, 0, 3, 65533, 0, 4, 65533, 1441802, 5, 65533, 1441793, 6, 65533, 10, 7, 65533, 0, 8, 65533, 0, 9, 65533, 0, 10, 65533, 1, 11, 65533, 1048576, 12, 65533, 1048576, 13, 65533, 1048576, 14, 65533, 1048576, 15, 65533, 1048576, 16, 65533, 0, 65527, 65533, 0, 65528, 65533, 0, 65529, 65533, 1048576, 65530, 65533, 1048576, 65531, 65533, 0, 65532, 65533, 0, 65533, 65533, 655361, 65534, 65533, 0, 65535, 65533, 0, 0, 65534, 0, 1, 65534, 0, 2, 65534, 0, 3, 65534, 0, 4, 65534, 0, 5, 65534, 0, 6, 65534, 0, 7, 65534, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 1, 11, 65534, 1048576, 12, 65534, 1048576, 13, 65534, 1048576, 14, 65534, 1048576, 15, 65534, 0, 16, 65534, 0, 17, 65534, 0, 65527, 65534, 0, 65528, 65534, 0, 65529, 65534, 1048576, 65530, 65534, 0, 65531, 65534, 655370, 65532, 65534, 1441793, 65533, 65534, 10, 65534, 65534, 0, 65535, 65534, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 0, 5, 65535, 0, 6, 65535, 0, 7, 65535, 0, 8, 65535, 0, 9, 65535, 0, 10, 65535, 11, 11, 65535, 1048576, 12, 65535, 1048576, 13, 65535, 1048576, 14, 65535, 1048576, 15, 65535, 1048576, 16, 65535, 0, 65526, 65535, 0, 65527, 65535, 0, 65528, 65535, 1048576, 65529, 65535, 0, 65530, 65535, 0, 65531, 65535, 1, 65532, 65535, 0, 65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0 )
 }
 _sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
+
+[node name="Spatial" type="Spatial" parent="Enviro" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80132, 0 )
+script = ExtResource( 21 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Enviro/Spatial" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7032, 0, 6.44765 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance2" type="MeshInstance" parent="Enviro/Spatial" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.21801, 0, -3.75828 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance3" type="MeshInstance" parent="Enviro/Spatial" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8049, 0, -6.24206 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance4" type="MeshInstance" parent="Enviro/Spatial" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81972, 0, -13.2686 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance5" type="MeshInstance" parent="Enviro/Spatial" index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.62021, 0, -11.3338 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance6" type="MeshInstance" parent="Enviro/Spatial" index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6407, 0, -8.19557 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance7" type="MeshInstance" parent="Enviro/Spatial" index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.07686, 0, -2.20632 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance8" type="MeshInstance" parent="Enviro/Spatial" index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11839, 0, -5.58725 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance9" type="MeshInstance" parent="Enviro/Spatial" index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.424855, 0, -13.2525 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance10" type="MeshInstance" parent="Enviro/Spatial" index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.32289, 0, -9.06149 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance11" type="MeshInstance" parent="Enviro/Spatial" index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0324, 0, 4.63111 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance12" type="MeshInstance" parent="Enviro/Spatial" index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7328, 0, 6.14877 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance13" type="MeshInstance" parent="Enviro/Spatial" index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.916, 0, 7.03769 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance14" type="MeshInstance" parent="Enviro/Spatial" index="13"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3542, 0, -2.74055 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance15" type="MeshInstance" parent="Enviro/Spatial" index="14"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0526, 2.70382, -6.99024 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance16" type="MeshInstance" parent="Enviro/Spatial" index="15"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4395, -9.53674e-07, -3.4631 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance18" type="MeshInstance" parent="Enviro/Spatial" index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0221, -9.53674e-07, -9.64826 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance19" type="MeshInstance" parent="Enviro/Spatial" index="17"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3783, 9.53674e-07, 1.78655 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance20" type="MeshInstance" parent="Enviro/Spatial" index="18"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.20183, 0, 15.0957 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance21" type="MeshInstance" parent="Enviro/Spatial" index="19"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.80377, 0, 16.8542 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance22" type="MeshInstance" parent="Enviro/Spatial" index="20"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.402561, 9.53674e-07, 16.5073 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance23" type="MeshInstance" parent="Enviro/Spatial" index="21"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20795, 9.53674e-07, 19.0891 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance24" type="MeshInstance" parent="Enviro/Spatial" index="22"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10422, 9.53674e-07, 10.9719 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance25" type="MeshInstance" parent="Enviro/Spatial" index="23"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39423, 9.53674e-07, 11.2346 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance26" type="MeshInstance" parent="Enviro/Spatial" index="24"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27552, 9.53674e-07, 4.76879 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance27" type="MeshInstance" parent="Enviro/Spatial" index="25"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3272, 9.53674e-07, 12.0852 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance28" type="MeshInstance" parent="Enviro/Spatial" index="26"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9404, -0.0697205, 3.62511 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance29" type="MeshInstance" parent="Enviro/Spatial" index="27"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35073, -0.0697205, -6.52471 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance17" type="MeshInstance" parent="Enviro/Spatial" index="28"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8868, 0, -0.918233 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 22 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="continue_clicked" from="Interface" to="." method="_on_Interface_continue_clicked"]
 
