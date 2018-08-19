@@ -45,6 +45,9 @@ func _physics_process(delta):
 	
 	if is_on_floor() and Input.is_action_just_pressed("move_jump"):
 		velocity = JUMP
+		var jumpsfx = [$Sfx/Jump1, $Sfx/Jump2, $Sfx/Jump3, $Sfx/Jump4, $Sfx/Jump5]
+		var index = randi()%5
+		jumpsfx[index].play()
 	
 	var speed = WALK_SPEED
 	if Input.is_action_pressed("move_sprint"):

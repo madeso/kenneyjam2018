@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://Ui/Interface.tscn" type="PackedScene" id=2]
@@ -10,6 +10,11 @@
 [ext_resource path="res://3d/mini-golf/Club_green_01.obj" type="ArrayMesh" id=8]
 [ext_resource path="res://3d/mini-golf/Flag_red_01.obj" type="ArrayMesh" id=9]
 [ext_resource path="res://Player.gd" type="Script" id=10]
+[ext_resource path="res://sfx/grunts/hit1.ogg" type="AudioStream" id=11]
+[ext_resource path="res://sfx/grunts/hit2.ogg" type="AudioStream" id=12]
+[ext_resource path="res://sfx/grunts/hit3.ogg" type="AudioStream" id=13]
+[ext_resource path="res://sfx/grunts/hit4.ogg" type="AudioStream" id=14]
+[ext_resource path="res://sfx/grunts/hit5.ogg" type="AudioStream" id=15]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -654,6 +659,53 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0
 shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
+
+[node name="Sfx" type="Node" parent="Player" index="2"]
+
+[node name="Jump1" type="AudioStreamPlayer" parent="Player/Sfx" index="0"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Jump2" type="AudioStreamPlayer" parent="Player/Sfx" index="1"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Jump3" type="AudioStreamPlayer" parent="Player/Sfx" index="2"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Jump4" type="AudioStreamPlayer" parent="Player/Sfx" index="3"]
+
+stream = ExtResource( 14 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Jump5" type="AudioStreamPlayer" parent="Player/Sfx" index="4"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="continue_clicked" from="Interface" to="." method="_on_Interface_continue_clicked"]
 
