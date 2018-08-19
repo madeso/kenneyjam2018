@@ -1,27 +1,28 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://Music/Casa Bossa Nova.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Ui/gfx/cursorHand_grey.png" type="Texture" id=3]
 [ext_resource path="res://Ui/Interface.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Mesh Libraries/Mini Golf.meshlib" type="MeshLibrary" id=5]
-[ext_resource path="res://environment.tres" type="Environment" id=6]
-[ext_resource path="res://3d/mini-golf/Club_blue_01.obj" type="ArrayMesh" id=7]
-[ext_resource path="res://3d/mini-golf/Club_red_01.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://3d/mini-golf/Club_green_01.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://3d/mini-golf/Flag_red_01.obj" type="ArrayMesh" id=10]
-[ext_resource path="res://Player.gd" type="Script" id=11]
-[ext_resource path="res://sfx/grunts/hit1.ogg" type="AudioStream" id=12]
-[ext_resource path="res://sfx/grunts/hit2.ogg" type="AudioStream" id=13]
-[ext_resource path="res://sfx/grunts/hit3.ogg" type="AudioStream" id=14]
-[ext_resource path="res://sfx/grunts/hit4.ogg" type="AudioStream" id=15]
-[ext_resource path="res://sfx/grunts/hit5.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Mesh Libraries/Prefabs/Tree1.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Mesh Libraries/Prefabs/Tree2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Mesh Libraries/Prefabs/Tree3.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Mesh Libraries/Nature2.meshlib" type="MeshLibrary" id=20]
-[ext_resource path="res://Spatial.gd" type="Script" id=21]
-[ext_resource path="res://3d/nature-flat/naturePack_flat_009.obj" type="ArrayMesh" id=22]
+[ext_resource path="res://Ui/ui_theme.theme" type="Theme" id=5]
+[ext_resource path="res://Mesh Libraries/Mini Golf.meshlib" type="MeshLibrary" id=6]
+[ext_resource path="res://environment.tres" type="Environment" id=7]
+[ext_resource path="res://3d/mini-golf/Club_blue_01.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://3d/mini-golf/Club_red_01.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://3d/mini-golf/Club_green_01.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://3d/mini-golf/Flag_red_01.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://Player.gd" type="Script" id=12]
+[ext_resource path="res://sfx/grunts/hit1.ogg" type="AudioStream" id=13]
+[ext_resource path="res://sfx/grunts/hit2.ogg" type="AudioStream" id=14]
+[ext_resource path="res://sfx/grunts/hit3.ogg" type="AudioStream" id=15]
+[ext_resource path="res://sfx/grunts/hit4.ogg" type="AudioStream" id=16]
+[ext_resource path="res://sfx/grunts/hit5.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Mesh Libraries/Prefabs/Tree1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Mesh Libraries/Prefabs/Tree2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Mesh Libraries/Prefabs/Tree3.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Mesh Libraries/Nature2.meshlib" type="MeshLibrary" id=21]
+[ext_resource path="res://Spatial.gd" type="Script" id=22]
+[ext_resource path="res://3d/nature-flat/naturePack_flat_009.obj" type="ArrayMesh" id=23]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 
@@ -40,7 +41,7 @@ points = PoolVector3Array( -0.899902, 0, 0.0999756, -0.899902, 0, -0.0999756, -1
 radius = 1.5
 height = 3.0
 
-[node name="Spatial" type="Spatial" index="0"]
+[node name="Spatial" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -103,10 +104,13 @@ stretch_mode = 0
 
 [node name="Interface" parent="." index="2" instance=ExtResource( 4 )]
 
+theme = ExtResource( 5 )
+_sections_unfolded = [ "Theme" ]
+
 [node name="Golf" type="GridMap" parent="." index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.56562 )
-theme = ExtResource( 5 )
+theme = ExtResource( 6 )
 cell_size = Vector3( 3, 3, 3 )
 cell_octant_size = 8
 cell_center_x = true
@@ -125,7 +129,7 @@ __meta__ = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="4"]
 
-environment = ExtResource( 6 )
+environment = ExtResource( 7 )
 
 [node name="RigidBody" type="RigidBody" parent="." index="5"]
 
@@ -168,7 +172,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 7 )
+mesh = ExtResource( 8 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -276,7 +280,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 8 )
+mesh = ExtResource( 9 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -381,7 +385,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 9 )
+mesh = ExtResource( 10 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -458,7 +462,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 10 )
+mesh = ExtResource( 11 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -549,7 +553,7 @@ axis_lock_angular_x = false
 axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Axis Lock", "Transform" ]
 
 [node name="Head" type="Spatial" parent="Player" index="0"]
@@ -561,7 +565,7 @@ _sections_unfolded = [ "Transform" ]
 
 keep_aspect = 1
 cull_mask = 1048575
-environment = ExtResource( 6 )
+environment = ExtResource( 7 )
 h_offset = 0.0
 v_offset = 0.0
 doppler_tracking = 0
@@ -584,7 +588,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Jump1" type="AudioStreamPlayer" parent="Player/Sfx" index="0"]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -593,7 +597,7 @@ bus = "Master"
 
 [node name="Jump2" type="AudioStreamPlayer" parent="Player/Sfx" index="1"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -602,7 +606,7 @@ bus = "Master"
 
 [node name="Jump3" type="AudioStreamPlayer" parent="Player/Sfx" index="2"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 15 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -611,7 +615,7 @@ bus = "Master"
 
 [node name="Jump4" type="AudioStreamPlayer" parent="Player/Sfx" index="3"]
 
-stream = ExtResource( 15 )
+stream = ExtResource( 16 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -620,7 +624,7 @@ bus = "Master"
 
 [node name="Jump5" type="AudioStreamPlayer" parent="Player/Sfx" index="4"]
 
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -635,177 +639,177 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7316, 0 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.265288, 0 )
 
-[node name="Tree1" parent="Enviro/Trees" index="0" instance=ExtResource( 17 )]
+[node name="Tree1" parent="Enviro/Trees" index="0" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7126, 1.71724, 14.2488 )
 
-[node name="Tree9" parent="Enviro/Trees" index="1" instance=ExtResource( 17 )]
+[node name="Tree9" parent="Enviro/Trees" index="1" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.44019, 1.71724, 22.8489 )
 
-[node name="Tree10" parent="Enviro/Trees" index="2" instance=ExtResource( 17 )]
+[node name="Tree10" parent="Enviro/Trees" index="2" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1822, 1.71724, 17.9329 )
 
-[node name="Tree11" parent="Enviro/Trees" index="3" instance=ExtResource( 17 )]
+[node name="Tree11" parent="Enviro/Trees" index="3" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3132, 1.71724, 20.5137 )
 
-[node name="Tree12" parent="Enviro/Trees" index="4" instance=ExtResource( 17 )]
+[node name="Tree12" parent="Enviro/Trees" index="4" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7011, 1.71724, -14.9613 )
 
-[node name="Tree13" parent="Enviro/Trees" index="5" instance=ExtResource( 17 )]
+[node name="Tree13" parent="Enviro/Trees" index="5" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26313, 1.71724, -20.8349 )
 
-[node name="Tree40" parent="Enviro/Trees" index="6" instance=ExtResource( 17 )]
+[node name="Tree40" parent="Enviro/Trees" index="6" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78337, 1.71724, -18.3833 )
 
-[node name="Tree41" parent="Enviro/Trees" index="7" instance=ExtResource( 17 )]
+[node name="Tree41" parent="Enviro/Trees" index="7" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7306, 1.71724, -22.1408 )
 
-[node name="Tree42" parent="Enviro/Trees" index="8" instance=ExtResource( 17 )]
+[node name="Tree42" parent="Enviro/Trees" index="8" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8898, 1.71724, -33.0876 )
 
-[node name="Tree14" parent="Enviro/Trees" index="9" instance=ExtResource( 17 )]
+[node name="Tree14" parent="Enviro/Trees" index="9" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6875, 1.71724, -17.123 )
 
-[node name="Tree15" parent="Enviro/Trees" index="10" instance=ExtResource( 17 )]
+[node name="Tree15" parent="Enviro/Trees" index="10" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.1555, 1.71724, 5.94309 )
 
-[node name="Tree17" parent="Enviro/Trees" index="11" instance=ExtResource( 17 )]
+[node name="Tree17" parent="Enviro/Trees" index="11" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8708, 1.71724, -4.59586 )
 
-[node name="Tree18" parent="Enviro/Trees" index="12" instance=ExtResource( 17 )]
+[node name="Tree18" parent="Enviro/Trees" index="12" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7799, 1.71724, -10.9678 )
 
-[node name="Tree16" parent="Enviro/Trees" index="13" instance=ExtResource( 17 )]
+[node name="Tree16" parent="Enviro/Trees" index="13" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9915, 1.71724, 10.4205 )
 
-[node name="Tree6" parent="Enviro/Trees" index="14" instance=ExtResource( 17 )]
+[node name="Tree6" parent="Enviro/Trees" index="14" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.79, 1.71724, 9.78082 )
 
-[node name="Tree2" parent="Enviro/Trees" index="15" instance=ExtResource( 18 )]
+[node name="Tree2" parent="Enviro/Trees" index="15" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48499, 2.3212, 10.3002 )
 
-[node name="Tree29" parent="Enviro/Trees" index="16" instance=ExtResource( 18 )]
+[node name="Tree29" parent="Enviro/Trees" index="16" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0347, 2.3212, 1.39837 )
 
-[node name="Tree30" parent="Enviro/Trees" index="17" instance=ExtResource( 18 )]
+[node name="Tree30" parent="Enviro/Trees" index="17" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2854, 2.3212, -18.9156 )
 
-[node name="Tree32" parent="Enviro/Trees" index="18" instance=ExtResource( 18 )]
+[node name="Tree32" parent="Enviro/Trees" index="18" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.82003, 2.3212, -27.3103 )
 
-[node name="Tree33" parent="Enviro/Trees" index="19" instance=ExtResource( 18 )]
+[node name="Tree33" parent="Enviro/Trees" index="19" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9797, 2.3212, 14.0453 )
 
-[node name="Tree34" parent="Enviro/Trees" index="20" instance=ExtResource( 18 )]
+[node name="Tree34" parent="Enviro/Trees" index="20" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1395, 2.3212, 17.2079 )
 
-[node name="Tree35" parent="Enviro/Trees" index="21" instance=ExtResource( 18 )]
+[node name="Tree35" parent="Enviro/Trees" index="21" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0723, 2.3212, 17.153 )
 
-[node name="Tree36" parent="Enviro/Trees" index="22" instance=ExtResource( 18 )]
+[node name="Tree36" parent="Enviro/Trees" index="22" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2001, 1.7316, 10.2018 )
 
-[node name="Tree37" parent="Enviro/Trees" index="23" instance=ExtResource( 18 )]
+[node name="Tree37" parent="Enviro/Trees" index="23" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3574, 1.7316, -3.22481 )
 
-[node name="Tree31" parent="Enviro/Trees" index="24" instance=ExtResource( 18 )]
+[node name="Tree31" parent="Enviro/Trees" index="24" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6055, 2.3212, -16.1318 )
 
-[node name="Tree7" parent="Enviro/Trees" index="25" instance=ExtResource( 18 )]
+[node name="Tree7" parent="Enviro/Trees" index="25" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1729, 2.3212, -2.64595 )
 
-[node name="Tree3" parent="Enviro/Trees" index="26" instance=ExtResource( 19 )]
+[node name="Tree3" parent="Enviro/Trees" index="26" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90746, 1.39477, 18.3807 )
 
-[node name="Tree8" parent="Enviro/Trees" index="27" instance=ExtResource( 19 )]
+[node name="Tree8" parent="Enviro/Trees" index="27" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72931, 1.39477, -14.3955 )
 
-[node name="Tree38" parent="Enviro/Trees" index="28" instance=ExtResource( 19 )]
+[node name="Tree38" parent="Enviro/Trees" index="28" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45239, 1.39477, -26.3823 )
 
-[node name="Tree39" parent="Enviro/Trees" index="29" instance=ExtResource( 19 )]
+[node name="Tree39" parent="Enviro/Trees" index="29" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8076, 1.39477, -24.7195 )
 
-[node name="Tree4" parent="Enviro/Trees" index="30" instance=ExtResource( 19 )]
+[node name="Tree4" parent="Enviro/Trees" index="30" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.959, 1.39477, 16.0191 )
 
-[node name="Tree19" parent="Enviro/Trees" index="31" instance=ExtResource( 19 )]
+[node name="Tree19" parent="Enviro/Trees" index="31" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3563, 1.39477, 18.1043 )
 
-[node name="Tree21" parent="Enviro/Trees" index="32" instance=ExtResource( 19 )]
+[node name="Tree21" parent="Enviro/Trees" index="32" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2772, 1.39477, -0.306976 )
 
-[node name="Tree22" parent="Enviro/Trees" index="33" instance=ExtResource( 19 )]
+[node name="Tree22" parent="Enviro/Trees" index="33" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3122, 1.39477, -9.52977 )
 
-[node name="Tree23" parent="Enviro/Trees" index="34" instance=ExtResource( 19 )]
+[node name="Tree23" parent="Enviro/Trees" index="34" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72612, 1.39477, 22.4568 )
 
-[node name="Tree25" parent="Enviro/Trees" index="35" instance=ExtResource( 19 )]
+[node name="Tree25" parent="Enviro/Trees" index="35" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6272, 1.39477, -18.2574 )
 
-[node name="Tree26" parent="Enviro/Trees" index="36" instance=ExtResource( 19 )]
+[node name="Tree26" parent="Enviro/Trees" index="36" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28449, 1.39477, -22.6199 )
 
-[node name="Tree27" parent="Enviro/Trees" index="37" instance=ExtResource( 19 )]
+[node name="Tree27" parent="Enviro/Trees" index="37" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8268, 1.39477, -25.4885 )
 
-[node name="Tree28" parent="Enviro/Trees" index="38" instance=ExtResource( 19 )]
+[node name="Tree28" parent="Enviro/Trees" index="38" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0132, 1.39477, -20.1189 )
 
-[node name="Tree24" parent="Enviro/Trees" index="39" instance=ExtResource( 19 )]
+[node name="Tree24" parent="Enviro/Trees" index="39" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4841, 1.39477, -13.1137 )
 
-[node name="Tree20" parent="Enviro/Trees" index="40" instance=ExtResource( 19 )]
+[node name="Tree20" parent="Enviro/Trees" index="40" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6253, 1.39477, 24.8078 )
 
-[node name="Tree5" parent="Enviro/Trees" index="41" instance=ExtResource( 19 )]
+[node name="Tree5" parent="Enviro/Trees" index="41" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9265, 1.39477, 8.60063 )
 
 [node name="Nature" type="GridMap" parent="Enviro" index="1"]
 
-theme = ExtResource( 20 )
+theme = ExtResource( 21 )
 cell_size = Vector3( 3, 3, 3 )
 cell_octant_size = 8
 cell_center_x = true
@@ -826,7 +830,7 @@ __meta__ = {
 [node name="Spatial" type="Spatial" parent="Enviro" index="2"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80132, 0 )
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="Enviro/Spatial" index="0"]
@@ -841,7 +845,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -878,7 +882,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -915,7 +919,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -952,7 +956,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -989,7 +993,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1026,7 +1030,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1063,7 +1067,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1100,7 +1104,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1137,7 +1141,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1174,7 +1178,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1211,7 +1215,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1248,7 +1252,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1285,7 +1289,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1322,7 +1326,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1359,7 +1363,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1396,7 +1400,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1433,7 +1437,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1470,7 +1474,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1507,7 +1511,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1544,7 +1548,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1581,7 +1585,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1618,7 +1622,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1655,7 +1659,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1692,7 +1696,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1729,7 +1733,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1766,7 +1770,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1803,7 +1807,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1840,7 +1844,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -1877,7 +1881,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 22 )
+mesh = ExtResource( 23 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
