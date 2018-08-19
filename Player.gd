@@ -102,13 +102,14 @@ func _physics_process(delta):
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		var inverted_x = -1
-		if mouse_invert_x:
-			inverted_x = 1
-		var inverted_y = -1
-		if mouse_invert_y:
-			inverted_y = 1
-		$Head.rotate_y( inverted_x * deg2rad(event.relative.x * mouse_sensitivity) )
-		var c = $Head/Camera.rotation_degrees.x
-		c = clamp(c + inverted_y * event.relative.y * mouse_sensitivity, -80, 80)
-		$Head/Camera.rotation_degrees.x = c
+		if !$"../Interface".visible:
+			var inverted_x = -1
+			if mouse_invert_x:
+				inverted_x = 1
+			var inverted_y = -1
+			if mouse_invert_y:
+				inverted_y = 1
+			$Head.rotate_y( inverted_x * deg2rad(event.relative.x * mouse_sensitivity) )
+			var c = $Head/Camera.rotation_degrees.x
+			c = clamp(c + inverted_y * event.relative.y * mouse_sensitivity, -80, 80)
+			$Head/Camera.rotation_degrees.x = c

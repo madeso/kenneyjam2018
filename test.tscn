@@ -38,7 +38,7 @@ points = PoolVector3Array( -0.899902, 0, 0.0999756, -0.899902, 0, -0.0999756, -1
 radius = 1.5
 height = 3.0
 
-[node name="Spatial" type="Spatial" index="0"]
+[node name="Spatial" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -629,175 +629,179 @@ bus = "Master"
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7316, 0 )
 
-[node name="Tree1" parent="Enviro" index="0" instance=ExtResource( 17 )]
+[node name="Trees" type="Spatial" parent="Enviro" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.265288, 0 )
+
+[node name="Tree1" parent="Enviro/Trees" index="0" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7126, 1.71724, 14.2488 )
 
-[node name="Tree9" parent="Enviro" index="1" instance=ExtResource( 17 )]
+[node name="Tree9" parent="Enviro/Trees" index="1" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.44019, 1.71724, 22.8489 )
 
-[node name="Tree10" parent="Enviro" index="2" instance=ExtResource( 17 )]
+[node name="Tree10" parent="Enviro/Trees" index="2" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1822, 1.71724, 17.9329 )
 
-[node name="Tree11" parent="Enviro" index="3" instance=ExtResource( 17 )]
+[node name="Tree11" parent="Enviro/Trees" index="3" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3132, 1.71724, 20.5137 )
 
-[node name="Tree12" parent="Enviro" index="4" instance=ExtResource( 17 )]
+[node name="Tree12" parent="Enviro/Trees" index="4" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7011, 1.71724, -14.9613 )
 
-[node name="Tree13" parent="Enviro" index="5" instance=ExtResource( 17 )]
+[node name="Tree13" parent="Enviro/Trees" index="5" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26313, 1.71724, -20.8349 )
 
-[node name="Tree40" parent="Enviro" index="6" instance=ExtResource( 17 )]
+[node name="Tree40" parent="Enviro/Trees" index="6" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78337, 1.71724, -18.3833 )
 
-[node name="Tree41" parent="Enviro" index="7" instance=ExtResource( 17 )]
+[node name="Tree41" parent="Enviro/Trees" index="7" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7306, 1.71724, -22.1408 )
 
-[node name="Tree42" parent="Enviro" index="8" instance=ExtResource( 17 )]
+[node name="Tree42" parent="Enviro/Trees" index="8" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8898, 1.71724, -33.0876 )
 
-[node name="Tree14" parent="Enviro" index="9" instance=ExtResource( 17 )]
+[node name="Tree14" parent="Enviro/Trees" index="9" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6875, 1.71724, -17.123 )
 
-[node name="Tree15" parent="Enviro" index="10" instance=ExtResource( 17 )]
+[node name="Tree15" parent="Enviro/Trees" index="10" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.1555, 1.71724, 5.94309 )
 
-[node name="Tree17" parent="Enviro" index="11" instance=ExtResource( 17 )]
+[node name="Tree17" parent="Enviro/Trees" index="11" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8708, 1.71724, -4.59586 )
 
-[node name="Tree18" parent="Enviro" index="12" instance=ExtResource( 17 )]
+[node name="Tree18" parent="Enviro/Trees" index="12" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7799, 1.71724, -10.9678 )
 
-[node name="Tree16" parent="Enviro" index="13" instance=ExtResource( 17 )]
+[node name="Tree16" parent="Enviro/Trees" index="13" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9915, 1.71724, 10.4205 )
 
-[node name="Tree6" parent="Enviro" index="14" instance=ExtResource( 17 )]
+[node name="Tree6" parent="Enviro/Trees" index="14" instance=ExtResource( 17 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.79, 1.71724, 9.78082 )
 
-[node name="Tree2" parent="Enviro" index="15" instance=ExtResource( 18 )]
+[node name="Tree2" parent="Enviro/Trees" index="15" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48499, 2.3212, 10.3002 )
 
-[node name="Tree29" parent="Enviro" index="16" instance=ExtResource( 18 )]
+[node name="Tree29" parent="Enviro/Trees" index="16" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0347, 2.3212, 1.39837 )
 
-[node name="Tree30" parent="Enviro" index="17" instance=ExtResource( 18 )]
+[node name="Tree30" parent="Enviro/Trees" index="17" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2854, 2.3212, -18.9156 )
 
-[node name="Tree32" parent="Enviro" index="18" instance=ExtResource( 18 )]
+[node name="Tree32" parent="Enviro/Trees" index="18" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.82003, 2.3212, -27.3103 )
 
-[node name="Tree33" parent="Enviro" index="19" instance=ExtResource( 18 )]
+[node name="Tree33" parent="Enviro/Trees" index="19" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9797, 2.3212, 14.0453 )
 
-[node name="Tree34" parent="Enviro" index="20" instance=ExtResource( 18 )]
+[node name="Tree34" parent="Enviro/Trees" index="20" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1395, 2.3212, 17.2079 )
 
-[node name="Tree35" parent="Enviro" index="21" instance=ExtResource( 18 )]
+[node name="Tree35" parent="Enviro/Trees" index="21" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0723, 2.3212, 17.153 )
 
-[node name="Tree36" parent="Enviro" index="22" instance=ExtResource( 18 )]
+[node name="Tree36" parent="Enviro/Trees" index="22" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2001, 1.7316, 10.2018 )
 
-[node name="Tree37" parent="Enviro" index="23" instance=ExtResource( 18 )]
+[node name="Tree37" parent="Enviro/Trees" index="23" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3574, 1.7316, -3.22481 )
 
-[node name="Tree31" parent="Enviro" index="24" instance=ExtResource( 18 )]
+[node name="Tree31" parent="Enviro/Trees" index="24" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6055, 2.3212, -16.1318 )
 
-[node name="Tree7" parent="Enviro" index="25" instance=ExtResource( 18 )]
+[node name="Tree7" parent="Enviro/Trees" index="25" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1729, 2.3212, -2.64595 )
 
-[node name="Tree3" parent="Enviro" index="26" instance=ExtResource( 19 )]
+[node name="Tree3" parent="Enviro/Trees" index="26" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90746, 1.39477, 18.3807 )
 
-[node name="Tree8" parent="Enviro" index="27" instance=ExtResource( 19 )]
+[node name="Tree8" parent="Enviro/Trees" index="27" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72931, 1.39477, -14.3955 )
 
-[node name="Tree38" parent="Enviro" index="28" instance=ExtResource( 19 )]
+[node name="Tree38" parent="Enviro/Trees" index="28" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45239, 1.39477, -26.3823 )
 
-[node name="Tree39" parent="Enviro" index="29" instance=ExtResource( 19 )]
+[node name="Tree39" parent="Enviro/Trees" index="29" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8076, 1.39477, -24.7195 )
 
-[node name="Tree4" parent="Enviro" index="30" instance=ExtResource( 19 )]
+[node name="Tree4" parent="Enviro/Trees" index="30" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.959, 1.39477, 16.0191 )
 
-[node name="Tree19" parent="Enviro" index="31" instance=ExtResource( 19 )]
+[node name="Tree19" parent="Enviro/Trees" index="31" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3563, 1.39477, 18.1043 )
 
-[node name="Tree21" parent="Enviro" index="32" instance=ExtResource( 19 )]
+[node name="Tree21" parent="Enviro/Trees" index="32" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2772, 1.39477, -0.306976 )
 
-[node name="Tree22" parent="Enviro" index="33" instance=ExtResource( 19 )]
+[node name="Tree22" parent="Enviro/Trees" index="33" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3122, 1.39477, -9.52977 )
 
-[node name="Tree23" parent="Enviro" index="34" instance=ExtResource( 19 )]
+[node name="Tree23" parent="Enviro/Trees" index="34" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72612, 1.39477, 22.4568 )
 
-[node name="Tree25" parent="Enviro" index="35" instance=ExtResource( 19 )]
+[node name="Tree25" parent="Enviro/Trees" index="35" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6272, 1.39477, -18.2574 )
 
-[node name="Tree26" parent="Enviro" index="36" instance=ExtResource( 19 )]
+[node name="Tree26" parent="Enviro/Trees" index="36" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28449, 1.39477, -22.6199 )
 
-[node name="Tree27" parent="Enviro" index="37" instance=ExtResource( 19 )]
+[node name="Tree27" parent="Enviro/Trees" index="37" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8268, 1.39477, -25.4885 )
 
-[node name="Tree28" parent="Enviro" index="38" instance=ExtResource( 19 )]
+[node name="Tree28" parent="Enviro/Trees" index="38" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0132, 1.39477, -20.1189 )
 
-[node name="Tree24" parent="Enviro" index="39" instance=ExtResource( 19 )]
+[node name="Tree24" parent="Enviro/Trees" index="39" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4841, 1.39477, -13.1137 )
 
-[node name="Tree20" parent="Enviro" index="40" instance=ExtResource( 19 )]
+[node name="Tree20" parent="Enviro/Trees" index="40" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6253, 1.39477, 24.8078 )
 
-[node name="Tree5" parent="Enviro" index="41" instance=ExtResource( 19 )]
+[node name="Tree5" parent="Enviro/Trees" index="41" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9265, 1.39477, 8.60063 )
 
-[node name="Nature" type="GridMap" parent="Enviro" index="42"]
+[node name="Nature" type="GridMap" parent="Enviro" index="1"]
 
 theme = ExtResource( 20 )
 cell_size = Vector3( 3, 3, 3 )
