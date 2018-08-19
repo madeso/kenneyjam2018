@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Casa Bossa Nova.ogg-568abd5ec9b79cb4e80d990c54826680.oggstr"
+
+[deps]
+
+source_file="res://Music/Casa Bossa Nova.ogg"
+dest_files=[ "res://.import/Casa Bossa Nova.ogg-568abd5ec9b79cb4e80d990c54826680.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
