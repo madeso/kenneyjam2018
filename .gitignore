@@ -9,3 +9,6 @@ export_presets.cfg
 
 # pycharm editor
 .idea/
+
+# dist folder
+dist/
