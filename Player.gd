@@ -4,7 +4,13 @@ var mouse_invert_x = false
 var mouse_invert_y = false
 var mouse_sensitivity = 0.3
 
-const SPEED = 7
+var velocity = 0
+
+const WALK_SPEED = 7
+const RUN_SPEED = 14
+const JUMP = 10
+
+const GRAVITY = 9.8 * 3
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -25,16 +31,26 @@ func _physics_process(delta):
 	var move = Vector3()
 	var aim = $Head/Camera.global_transform.basis
 	
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_forward"):
 		move += flatten(-aim.z)
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_back"):
 		move += flatten(aim.z)
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		move += flatten(-aim.x)
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		move += flatten(aim.x)
-
-	move_and_slide(move.normalized() * SPEED)
+	
+	velocity -= GRAVITY * delta
+	
+	if Input.is_action_just_pressed("move_jump"):
+		velocity = JUMP
+	
+	var speed = WALK_SPEED
+	if Input.is_action_pressed("move_sprint"):
+		speed = RUN_SPEED
+	
+	velocity = move_and_slide(move.normalized() * speed + Vector3(0, velocity, 0)).y
+	
 	
 
 func _input(event):
